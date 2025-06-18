@@ -104,13 +104,6 @@ uvicorn main:app --host 0.0.0.0 --port 5001
 └── requirements.txt    # 필요한 패키지 목록
 ```
 
-## 🧪 API 문서 자동 제공
-
-- Swagger 문서: [http://localhost:5001/docs](http://localhost:5001/docs)
-- ReDoc 문서: [http://localhost:5001/redoc](http://localhost:5001/redoc)
-
----
-
 ## 📌 참고
 
 - `model.py` 파일에서 `PIL.Image`를 입력받고 결과를 반환하는 `predict()` 함수가 정의되어 있어야 합니다.
