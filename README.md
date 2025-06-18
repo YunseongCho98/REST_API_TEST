@@ -55,8 +55,7 @@ http://localhost:5001
 .
 ├── app.py              # Flask 서버 코드
 ├── model.py            # predict(image) 함수 포함
-├── requirements.txt    # 필요한 패키지 목록
-└── README.md           # 문서
+└── requirements.txt    # 필요한 패키지 목록
 ```
 
 ---
@@ -65,7 +64,14 @@ http://localhost:5001
 
 ## 🚀 실행 방법 (FastAPI)
 
-### 1. 라이브러리 설치
+### 1. 가상환경 생성 및 활성화 (선택사항)
+
+```bash
+python3 -m venv env
+source env/bin/activate  # Windows: env\Scripts\activate
+```
+
+### 2. 라이브러리 설치
 
 ```bash
 pip install fastapi uvicorn pillow jinja2
@@ -77,21 +83,17 @@ pip install fastapi uvicorn pillow jinja2
 pip install -r requirements.txt
 ```
 
-### 2. 서버 실행
+### 3. 서버 실행
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 5001
 ```
 
-### 3. 접속
+### 4. 접속
 
 - 로컬 접속: `http://localhost:5001`
-- 다른 기기에서 접속: `http://<Mac의 IP 주소>:5001`
+- 다른 기기에서 접속: `http://<서버의 IP 주소>:5001`
 
-> IP 확인 명령어 (Mac):
-```bash
-ipconfig getifaddr en0
-```
 
 ## 📂 구조 (FastAPI)
 
@@ -99,8 +101,7 @@ ipconfig getifaddr en0
 .
 ├── main.py             # FastAPI 서버 코드
 ├── model.py            # predict(image) 함수 포함
-├── requirements.txt    # 필요한 패키지 목록
-└── README.md           # 문서
+└── requirements.txt    # 필요한 패키지 목록
 ```
 
 ## 🧪 API 문서 자동 제공
@@ -121,7 +122,3 @@ def predict(image: Image.Image) -> Image.Image:
 ```
 
 ---
-
-## 📝 License
-
-MIT License
